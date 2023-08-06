@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Trábajo práctico 2</title>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<!-- Nombre -->
+				<legend>Información Personal</legend>
+				<label for="fname">Ingrese el nombre</label>
+				<input type="text" id="fname" name="fname" placeholder="Nombre" />
+				<!-- Validación de género -->
+				<input type="checkbox" id="mujer" name="mujer" value="Mujer" />
+				<label for="mujer">Mujer</label>
+				<input type="checkbox" id="varon" name="varon" value="Varon" />
+				<label for="varon">Varón</label>
+				<input type="checkbox" id="otro" name="otro" value="Otro" />
+				<label for="otro">Otro</label>
+				<!-- Provincia de nacimiento -->
+				<select name="provincia" id="provincias" size="0">
+					<option value="buenosAires">Buenos Aires</option>
+					<option value="catamarca">Catamarca</option>
+					<option value="chaco">Chaco</option>
+					<option value="chubut">Chubut</option>
+					<option value="cordoba">Córdoba</option>
+					<option value="corrientes">Corrientes</option>
+					<option value="entreRios">Entre Ríos</option>
+					<option value="formosa">Formosa</option>
+					<option value="jujuy">Jujuy</option>
+					<option value="laPampa">La Pampa</option>
+					<option value="laRioja">La Rioja</option>
+					<option value="mendoza">Mendoza</option>
+					<option value="misiones">Misiones</option>
+					<option value="neuquen">Neuquén</option>
+					<option value="rioNegro">Río Negro</option>
+					<option value="salta">Salta</option>
+					<option value="sanJuan">San Juan</option>
+					<option value="sanLuis">San Luis</option>
+					<option value="santaCruz">Santa Cruz</option>
+					<option value="santaFe">Santa Fe</option>
+					<option value="santiagoDelEstero">Santiago del Estero</option>
+					<option value="tierraDelFuego">Tierra del Fuego</option>
+					<option value="tucuman">Tucumán</option>
+				</select>
+                <!-- Comentario de múltiples lineas -->
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+				<!-- Verificación de si es un robot -->
+				<input type="checkbox" name="robot" />
+				<label for="robot">No soy un robot</label>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+			</fieldset>
+		</form>
+	</body>
+</html>
