@@ -25,6 +25,7 @@ body {
 }
 
 .form-fieldset {
+	border-radius: 5px;
 	min-width: 260px;
 	width: 50%;
 	display: flex;
@@ -137,6 +138,8 @@ body {
 	outline: none;
 	resize: none;
 	font-size: 16px;
+	border: solid 1px;
+	border-radius: 5px;
 }
 
 .box4 {
