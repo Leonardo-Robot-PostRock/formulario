@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercico 2.3</title>
+	</head>
+	<body>
+		<form class="form">
+			<div class="user-name">
+				<label for="fname" class="enter-name">Ingrese el nombre</label>
+				<input
+					type="text"
+					id="fname"
+					class="name"
+					name="fname"
+					placeholder="Nombre"
+				/>
+			</div>
+			<div class="user-password">
+				<label for="fname" class="enter-name">Ingrese una contraseña</label>
+				<input
+					type="password"
+					id="fpassword"
+					class="password"
+					name="fpassword"
+					placeholder="Contraseña"
+					onkeyup="passwordValidation()"
+				/>
+				<div id="message">
+                </div>
+                <h6 id="warning-title">  
+                </h6>
+			</div>
+		</form>
+		<script type="text/javascript" src="scripts/passwordValidation.js"></script>
+	</body>
+</html>
