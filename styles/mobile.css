@@ -78,6 +78,11 @@
 	top: 7px;
 }
 
+.select-items {
+	height: 280px;
+	overflow-y: scroll;
+}
+
 /*style the items (options), including the selected item:*/
 .select-items div,
 .select-selected {
