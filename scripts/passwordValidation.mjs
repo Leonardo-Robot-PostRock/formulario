@@ -1,29 +1,4 @@
 const message = document.querySelector('#message');
-
-const validPasswordMessage = () => {
-	message.innerHTML = 'Contraseña válida';
-	message.style.color = 'green';
-	showWarningMessage(false);
-};
-
-const invalidPasswordMessage = () => {
-	message.innerHTML = 'La contraseña no cumple con los requisitos';
-	message.style.color = 'red';
-	showWarningMessage(true);
-};
-
-const passwordValidation = () => {
-	const password = document.querySelector('#fpassword').value;
-
-	const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,16}$/;
-
-	if (regex.test(password)) {
-		validPasswordMessage();
-	} else {
-		invalidPasswordMessage();
-	}
-};
-
 const button = document.querySelector('#button');
 const warningTitle = document.querySelector('#warning-title');
 
@@ -47,3 +22,26 @@ function showWarningMessage(messageDisplayed) {
 		warningMessageRemoved();
 	}
 }
+
+const validPasswordMessage = () => {
+	message.innerHTML = 'Contraseña válida';
+	message.style.color = 'green';
+	showWarningMessage(false);
+};
+
+const invalidPasswordMessage = () => {
+	message.innerHTML = 'La contraseña no cumple con los requisitos';
+	message.style.color = 'red';
+	showWarningMessage(true);
+};
+
+const passwordValidation = () => {
+	const password = document.querySelector('#fpassword').value;
+	const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,16}$/;
+
+	if (regex.test(password)) {
+		validPasswordMessage();
+	} else {
+		invalidPasswordMessage();
+	}
+};
