@@ -117,6 +117,10 @@
 
 .comentario {
 	margin-bottom: 10px;
+	padding: 10px;
+	outline: none;
+	resize: none;
+	font-size: 16px;
 }
 
 .container-buttons {
