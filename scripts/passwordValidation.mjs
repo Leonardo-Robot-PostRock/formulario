@@ -41,7 +41,7 @@ const warningMessageRemoved = () => {
 };
 
 function showWarningMessage(messageDisplayed) {
-	if (messageDisplayed === true) {
+	if (messageDisplayed) {
 		warningMessage();
 	} else {
 		warningMessageRemoved();
