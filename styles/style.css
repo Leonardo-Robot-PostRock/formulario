@@ -1,29 +1,4 @@
-/* Paleta de 5 colores */
-:root {
-	--color-monocrom-blue-dark: #002b55;
-	--color-monocrom-blue-medium: #0055aa;
-	--color-monocrom-blue-light: #007fff;
-	--color-monocrom-blue-pale: #55aaff;
-	--color-monocrom-blue-pastel: #aad4ff;
-	--color-gray: #adadad;
-	--color-white: #ffffff;
-	/* Roboto Font Family */
-	/* Source Serif Pro Font Family */
-	/* Source Code Pro Font Family */
-	--font-source-code-pro: 'Source Code Pro', 'Source Code Pro Black',
-		'Source Code Pro ExtraLight', 'Source Code Pro Light',
-		'Source Code Pro Medium', 'Source Code Pro Semibold';
-
-	/* Source Sans Pro Font Family */
-	--font-source-sans-pro: 'Source Sans Pro', 'Source Sans Pro Black',
-		'Source Sans Pro ExtraLight', 'Source Sans Pro Light',
-		'Source Sans Pro Semibold';
-
-	/* Source Serif Pro Font Family */
-	--font-source-serif-pro: 'Source Serif Pro', 'Source Serif Pro Black',
-		'Source Serif Pro ExtraLight', 'Source Serif Pro Light',
-		'Source Serif Pro Semibold';
-}
+@import './root.css';
 
 * {
 	/* font-family: 'Inconsolata', monospace; */
@@ -37,6 +12,9 @@
 
 body {
 	width: 100vw;
+	font-family: var(--font);
+	color: var(--light);
+	background-color: var(--dark);
 }
 
 .main {
@@ -68,14 +46,13 @@ body {
 	font-size: 2rem;
 }
 
-.user-name {
+.input-container {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 }
 
-.user-name > .name {
-	margin: 10px 0;
+.input-container > .name {
 	outline: none;
 	height: 30px;
 	padding: 10px;
@@ -156,7 +133,7 @@ body {
 /*style items (options):*/
 .select-items {
 	position: absolute;
-	background-color: var(--color-gray);
+	background-color: #242424;
 	top: 100%;
 	left: 0;
 	right: 0;
@@ -177,8 +154,10 @@ body {
 	padding: 10px;
 	outline: none;
 	resize: none;
+	color: var(--light);
+	background-color: #242424;
 	font-size: 16px;
-	border: solid 1px;
+	border: solid 1px transparent;
 	border-radius: 5px;
 }
 
@@ -192,10 +171,16 @@ body {
 }
 
 .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	font-weight: bold;
+	padding: 10px;
 	border-radius: 3px;
-	height: 30px;
+	cursor: pointer;
+	color: var(--color-white);
+	height: 40px;
 	background-color: transparent;
 	border: 1px solid var(--color-gray);
 }
