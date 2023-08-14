@@ -1,107 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Trábajo práctico 2</title>
-		<link rel="stylesheet" href="./styles/style.css" />
-		<link
-			rel="stylesheet"
-			href="./styles/tablets.css"
-			media="(min-width:930px)"
-		/>
-		<!-- Inconsolata font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<main class="main">
-			<form class="form">
-				<fieldset class="form-fieldset">
-					<!-- Nombre -->
-					<legend class="form-fieldset__text">Información Personal</legend>
-					<div class="user-name">
-						<label for="fname" class="enter-name">Ingrese el nombre</label>
-						<input
-							type="text"
-							id="fname"
-							class="name"
-							name="fname"
-							placeholder="Nombre"
-						/>
-					</div>
-					<!-- Validación de género -->
-					<div class="box box1">
-						<input type="radio" id="mujer" name="gender" value="Mujer" />
-						<label for="mujer">Mujer</label>
-					</div>
-					<div class="box box2">
-						<input type="radio" id="varon" name="gender" value="Varon" />
-						<label for="varon">Varón</label>
-					</div>
-					<div class="box box3">
-						<input type="radio" id="otro" name="gender" value="Otro" />
-						<label for="otro">Otro</label>
-					</div>
-					<!-- Provincia de nacimiento -->
-					<div class="custom-select">
-						<select
-							name="provincia"
-							id="provincias"
-							size="0"
-							class="provincias"
-						>
-							<option value="0">Selecciona una provincia</option>
-							<option value="Buenos Aires">Buenos Aires</option>
-							<option value="Catamarca">Catamarca</option>
-							<option value="Chaco">Chaco</option>
-							<option value="Chubut">Chubut</option>
-							<option value="Córdoba">Córdoba</option>
-							<option value="Corrientes">Corrientes</option>
-							<option value="Entre Ríos">Entre Ríos</option>
-							<option value="Formosa">Formosa</option>
-							<option value="Jujuy">Jujuy</option>
-							<option value="La Pampa">La Pampa</option>
-							<option value="La Rioja">La Rioja</option>
-							<option value="Mendoza">Mendoza</option>
-							<option value="Misiones">Misiones</option>
-							<option value="Neuquén">Neuquén</option>
-							<option value="Río Negro">Río Negro</option>
-							<option value="Salta">Salta</option>
-							<option value="San Juan">San Juan</option>
-							<option value="San Luis">San Luis</option>
-							<option value="Santa Cruz">Santa Cruz</option>
-							<option value="Santa Fe">Santa Fe</option>
-							<option value="Santiago Del Estero">Santiago Del Estero</option>
-							<option value="Tierra Del Fuego">Tierra Del Fuego</option>
-							<option value="Tucumán">Tucumán</option>
-						</select>
-					</div>
-					<!-- Comentario de múltiples lineas -->
-					<textarea
-						name="comentario"
-						id="comentario"
-						class="comentario"
-						cols="30"
-						rows="10"
-					></textarea>
-					<!-- Verificación de si es un robot -->
-					<div class="box box4">
-						<input type="checkbox" name="robot" />
-						<label for="robot">No soy un robot</label>
-					</div>
-					<!-- Buttones para limpiar o enviar información -->
-					<div class="container-buttons">
-						<input type="submit" class="button button1" value="Enviar" />
-						<input type="reset" class="button button2" value="Limpiar" />
-					</div>
-				</fieldset>
-			</form>
-		</main>
-		<script type="text/javascript" src="scripts/select.js"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Trábajo práctico 2</title>
+	<link rel="stylesheet" href="./styles/style.css" />
+	<link rel="stylesheet" href="./styles/tablets.css" media="(min-width:930px)" />
+	<!-- animations -->
+	<link rel="stylesheet" href="./styles/animations.css" />
+	<!-- Inconsolata font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<main class="main">
+		<form class="form">
+			<fieldset class="form-fieldset">
+				<!-- Nombre -->
+				<legend class="form-fieldset__text">Información Personal</legend>
+				<div class="input-container">
+					<label for="fname" class="enter-name sr-only">Ingrese el nombre</label>
+					<input type="text" id="fname" class="name" name="fname" placeholder="Nombre" />
+				</div>
+				<!-- Validación de género -->
+				<div class="box box1">
+					<input type="radio" id="mujer" name="gender" value="Mujer" />
+					<label for="mujer">Mujer</label>
+				</div>
+				<div class="box box2">
+					<input type="radio" id="varon" name="gender" value="Varon" />
+					<label for="varon">Varón</label>
+				</div>
+				<div class="box box3">
+					<input type="radio" id="otro" name="gender" value="Otro" />
+					<label for="otro">Otro</label>
+				</div>
+				<!-- Provincia de nacimiento -->
+				<div class="custom-select">
+					<select name="provincia" id="provincias" size="0" class="provincias">
+						<option value="0">Selecciona una provincia</option>
+						<option value="Buenos Aires">Buenos Aires</option>
+						<option value="Catamarca">Catamarca</option>
+						<option value="Chaco">Chaco</option>
+						<option value="Chubut">Chubut</option>
+						<option value="Córdoba">Córdoba</option>
+						<option value="Corrientes">Corrientes</option>
+						<option value="Entre Ríos">Entre Ríos</option>
+						<option value="Formosa">Formosa</option>
+						<option value="Jujuy">Jujuy</option>
+						<option value="La Pampa">La Pampa</option>
+						<option value="La Rioja">La Rioja</option>
+						<option value="Mendoza">Mendoza</option>
+						<option value="Misiones">Misiones</option>
+						<option value="Neuquén">Neuquén</option>
+						<option value="Río Negro">Río Negro</option>
+						<option value="Salta">Salta</option>
+						<option value="San Juan">San Juan</option>
+						<option value="San Luis">San Luis</option>
+						<option value="Santa Cruz">Santa Cruz</option>
+						<option value="Santa Fe">Santa Fe</option>
+						<option value="Santiago Del Estero">Santiago Del Estero</option>
+						<option value="Tierra Del Fuego">Tierra Del Fuego</option>
+						<option value="Tucumán">Tucumán</option>
+					</select>
+				</div>
+				<!-- Comentario de múltiples lineas -->
+				<textarea name="comentario" id="comentario" class="comentario" cols="30" rows="10"></textarea>
+				<!-- Verificación de si es un robot -->
+				<div class="box box4">
+					<input type="checkbox" name="robot" />
+					<label for="robot">No soy un robot</label>
+				</div>
+				<!-- Buttones para limpiar o enviar información -->
+				<div class="container-buttons">
+					<input type="submit" class="button button1" value="Enviar" />
+					<input type="reset" class="button button2" value="Limpiar" />
+				</div>
+			</fieldset>
+		</form>
+	</main>
+	<script type="text/javascript" src="scripts/input.js" ></script>
+	<script type="text/javascript" src="scripts/select.js"></script>
+</body>
+
 </html>
